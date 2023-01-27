@@ -11,7 +11,7 @@ import { Car } from './car.entity';
 import { CarsService } from './cars.service';
 
 @Controller('cars')
-export class UsersController {
+export class CarsController {
   constructor(private readonly carsService: CarsService) {}
 
   @Get()
