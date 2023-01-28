@@ -9,10 +9,16 @@ import {
 } from '@nestjs/common';
 import { Car } from './car.entity';
 import { CarsService } from './cars.service';
+import { CreateCarDto } from './dto/create-car.dto';
 
 @Controller('cars')
 export class CarsController {
   constructor(private readonly carsService: CarsService) {}
+
+  @Post()
+  create(@Body() createCarDto: CreateCarDto): Promise<Car> {
+    return this.carsService.create(createCarDto);
+  }
 
   @Get()
   findAll(): Promise<Car[]> {

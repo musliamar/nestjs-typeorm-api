@@ -1,0 +1,14 @@
+
+POST http://localhost:3000/cars
+content-type: application/json
+
+{
+    "chassisNumber": "amar2",
+    "manufacturer": "VWtest2",
+    "model": "Golftes2t",
+    "yearOfProduction": 2015,
+    "mileage": 156321,
+    "typeOfCar": "Hatchbacktest2",
+    "typeOfFuel": "Dieseltes2t",
+    "firstRegistrationDate": "2015-09-16"
+    }
