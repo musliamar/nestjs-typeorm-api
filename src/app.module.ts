@@ -3,7 +3,6 @@ import { ConfigModule } from '@nestjs/config';
 import { CarsModule } from './cars/cars.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Car } from './cars/car.entity';
-import * as path from 'path';
 
 @Module({
   imports: [
