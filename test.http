@@ -1,14 +1,11 @@
 
-POST http://localhost:3000/cars
+DELETE http://localhost:3000/cars/repairs/2
 content-type: application/json
 
 {
-    "chassisNumber": "amar2",
-    "manufacturer": "VWtest2",
-    "model": "Golftes2t",
-    "yearOfProduction": 2015,
-    "mileage": 156321,
-    "typeOfCar": "Hatchbacktest2",
-    "typeOfFuel": "Dieseltes2t",
-    "firstRegistrationDate": "2015-09-16"
+    "descOfRepair": "test2",
+    "details": "test2",
+    "cost": 2002,
+    "fromDate": "2023-01-29T15:00:25.000Z",
+    "toDate": "2023-01-29T15:00:25.000Z"
     }

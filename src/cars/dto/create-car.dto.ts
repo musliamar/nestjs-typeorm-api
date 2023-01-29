@@ -1,5 +1,4 @@
 export class CreateCarDto {
-  id: number;
   chassisNumber: string;
   manufacturer: string;
   model: string;

@@ -3,6 +3,8 @@ import { ConfigModule } from '@nestjs/config';
 import { CarsModule } from './cars/cars.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Car } from './cars/car.entity';
+import { Rental } from './cars/carRental.entity';
+import { Repair } from './cars/carRepair.entity';
 
 @Module({
   imports: [
@@ -14,7 +16,7 @@ import { Car } from './cars/car.entity';
       username: process.env.MARIADB_USERNAME,
       password: process.env.MARIADB_PASSWORD,
       database: process.env.MARIADB_DATABASE,
-      entities: [Car],
+      entities: [Car, Rental, Repair],
       synchronize: true,
     }),
     CarsModule,
