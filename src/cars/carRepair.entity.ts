@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { Car } from './car.entity';
 
 @Entity()
 export class Repair {
@@ -19,4 +20,7 @@ export class Repair {
 
   @Column()
   toDate: Date;
+
+  @ManyToOne(() => Car, (car) => car.repairs)
+  car: Car;
 }
